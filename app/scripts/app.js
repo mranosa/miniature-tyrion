@@ -23,6 +23,10 @@ angular.module('miniatureTyrionApp', ['ui', 'LocalStorageModule'])
         templateUrl: 'views/donations.html',
         controller: 'DonationsCtrl'
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
