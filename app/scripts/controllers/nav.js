@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('miniatureTyrionApp')
-  .controller('NavCtrl', function ($scope) {
+  .controller('NavCtrl', function ($scope, $location) {
     $scope.navs = [
 	  	{
 	  		name: 'Home',
