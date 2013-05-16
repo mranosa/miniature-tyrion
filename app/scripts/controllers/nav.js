@@ -2,6 +2,10 @@
 
 angular.module('miniatureTyrionApp')
   .controller('NavCtrl', function ($scope, $location) {
+  	$scope.navProp = {
+  		hidden : true
+  	};
+
     $scope.navs = [
 	  	{
 	  		name: 'Home',
@@ -35,5 +39,15 @@ angular.module('miniatureTyrionApp')
 	    );
 	  };
 
+	  $scope.showNav = function(){
+	  	$scope.navProp.hidden = false;
+	  };
+
+	  $scope.hideNav = function(){
+	  	$scope.navProp.hidden = true;
+	  };
+
 	  $scope.$on('update_active_nav', $scope.updateActiveNav);
+	  $scope.$on('show_nav', $scope.showNav);
+	  $scope.$on('hide_nav', $scope.hideNav);
   });

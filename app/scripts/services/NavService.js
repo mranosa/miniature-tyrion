@@ -8,6 +8,12 @@ angular.module('miniatureTyrionApp')
     NavService.prototype = {
       updateActiveNav: function(){
         $rootScope.$broadcast('update_active_nav');
+      },
+      showNav: function(){
+        $rootScope.$broadcast('show_nav');
+      },
+      hideNav: function(){
+        $rootScope.$broadcast('hide_nav');
       }
     }
 
