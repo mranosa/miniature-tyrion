@@ -2,9 +2,11 @@
 
 angular.module('miniatureTyrionApp')
   .controller('HeaderCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  	$scope.headerProp = {
+  		hideRightPanel : true
+  	}
+  	
+    $scope.$on('user_logged_in', function(){
+    	$scope.headerProp.hideRightPanel = false;
+    });
   });
