@@ -41,16 +41,15 @@
     <section class="section">
         <div class="row-fluid">
             <!-- span side-left -->
-            <!-- <div class="span1" ng-controller="NavCtrl"> -->
-            <div class="span1">
+            <div class="span1" ng-controller="NavCtrl">
                 <aside class="side-left">
                     <ul class="sidebar">
-                        <li>
-                            <a href="#">
+                        <li ng-repeat="nav in navs" class="{{nav.navCls}}">
+                            <a href="{{nav.url}}" ng-click="updateActiveNav()">
                                 <div class="helper-font-24">
-                                    <i class="icofont-dashboard"></i>
+                                    <i class="{{nav.iconCls}}"></i>
                                 </div>
-                                <span class="sidebar-text">Dashboard</span>
+                                <span class="sidebar-text">{{nav.name}}</span>
                             </a>
                         </li>
                     </ul>
