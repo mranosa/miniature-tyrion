@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/main.css -->
+    <link href="http://fonts.googleapis.com/css?family=Aclonica:regular" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -25,7 +26,44 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view></div>
+    <header class="header" data-spy="affix" data-offset-top="0">
+        <div class="navbar-helper">
+            <div class="row-fluid">
+                <div class="span2">
+                    <div class="panel-sitename">
+                        <h2><a href="#/"><span class="color-teal">Bayan</span>Hero</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="row-fluid">
+            <!-- span side-left -->
+            <!-- <div class="span1" ng-controller="NavCtrl"> -->
+            <div class="span1">
+                <aside class="side-left">
+                    <ul class="sidebar">
+                        <li>
+                            <a href="#">
+                                <div class="helper-font-24">
+                                    <i class="icofont-dashboard"></i>
+                                </div>
+                                <span class="sidebar-text">Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            
+            <div class="span11">
+                <!-- content -->
+                <div ng-view></div>
+            </div>
+            
+        </div>
+    </section>
 
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
