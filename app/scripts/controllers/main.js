@@ -1,16 +1,8 @@
 'use strict';
 
 angular.module('miniatureTyrionApp')
-  .controller('MainCtrl', function ($scope, localStorageService, $location) {
+  .controller('MainCtrl', function ($scope, NavService) {
     
-    var userInStore = localStorageService.get('user');
-
-    if(userInStore){
-    	//TODO go to dashboard
-    	$location.path('/home')
-    } else {
-    	//TODO go to login
-    	$location.path('/login');
-    }
+    NavService.updateActiveNav();
 
   });
