@@ -41,7 +41,7 @@
     <section class="section">
         <div class="row-fluid">
             <!-- span side-left -->
-            <div class="span1" ng-controller="NavCtrl">
+            <div class="span1" ng-controller="NavCtrl" ng-hide="navProp.hidden">
                 <aside class="side-left">
                     <ul class="sidebar">
                         <li ng-repeat="nav in navs" class="{{nav.navCls}}">
@@ -56,7 +56,7 @@
                 </aside>
             </div>
             
-            <div class="span11">
+            <div class="span12" id="content-container">
                 <!-- content -->
                 <div ng-view></div>
             </div>
@@ -67,6 +67,9 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
     <script src="components/underscore/underscore-min.js"></script>
+    <script src="http://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="http://cdn.firebase.com/v0/firebase-auth-client.js"></script>
+    <script src="http://connect.facebook.net/en_US/all.js"></script>
     <script src="components/angular/angular.js"></script>
     <script src="components/angular-local-storage/angular-local-storage.js"></script>
     <script src="components/angular-ui/build/angular-ui.js"></script>
