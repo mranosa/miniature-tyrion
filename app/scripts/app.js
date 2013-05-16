@@ -15,6 +15,10 @@ angular.module('miniatureTyrionApp', ['ui', 'LocalStorageModule'])
         templateUrl: 'views/campaigns.html',
         controller: 'CampaignsCtrl'
       })
+      .when('/payments', {
+        templateUrl: 'views/payments.html',
+        controller: 'PaymentsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
