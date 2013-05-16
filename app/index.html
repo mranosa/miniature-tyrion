@@ -45,7 +45,7 @@
                 <aside class="side-left">
                     <ul class="sidebar">
                         <li ng-repeat="nav in navs" class="{{nav.navCls}}">
-                            <a href="{{nav.url}}" ng-click="updateActiveNav()">
+                            <a href="{{nav.url}}">
                                 <div class="helper-font-24">
                                     <i class="{{nav.iconCls}}"></i>
                                 </div>
@@ -83,6 +83,7 @@
     <script src="scripts/controllers/campaigns.js"></script>
     <script src="scripts/controllers/payments.js"></script>
     <script src="scripts/controllers/donations.js"></script>
+    <script src="scripts/services/NavService.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
