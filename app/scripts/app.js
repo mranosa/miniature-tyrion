@@ -7,6 +7,10 @@ angular.module('miniatureTyrionApp', ['ui', 'LocalStorageModule'])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/home', {
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
