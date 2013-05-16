@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('miniatureTyrionApp')
-  .controller('LoginCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('LoginCtrl', function ($scope, AuthService, NavService) {
+  	NavService.hideNav();
+  	
+    $scope.signIn = function(){
+		AuthService.login();
+	};
   });
