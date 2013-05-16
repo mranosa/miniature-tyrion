@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('miniatureTyrionApp')
-  .controller('NavCtrl', function ($scope, $location) {
+  .controller('NavCtrl', function ($scope, $location, $rootScope, localStorageService) {
   	$scope.navProp = {
   		hidden : true
   	};
@@ -50,4 +50,10 @@ angular.module('miniatureTyrionApp')
 	  $scope.$on('update_active_nav', $scope.updateActiveNav);
 	  $scope.$on('show_nav', $scope.showNav);
 	  $scope.$on('hide_nav', $scope.hideNav);
+
+	  $scope.$on('user_logged_in', function(){
+	  	$rootScope.user = localStorageService.get('user');
+	  	$rootScope.userName = localStorageService.get('user_name');
+	  	$rootScope.userDisplayName = localStorageService.get('user_display_name');
+	  });
   });

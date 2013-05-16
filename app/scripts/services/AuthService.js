@@ -11,7 +11,9 @@ angular.module('miniatureTyrionApp')
       authClient = new FirebaseAuthClient(bayanheroRef, function(error, user) {
         if (!error && user) {
           localStorageService.clearAll();
-          localStorageService.add('user', user);
+          localStorageService.add('user', user.id);
+          localStorageService.add('user_name', user.username);
+          localStorageService.add('user_display_name', user.displayName);
           
           var currentUserRef = new Firebase(USERS_URL + '/' + user.id);
           currentUserRef.once('value', function(data) {
@@ -23,7 +25,6 @@ angular.module('miniatureTyrionApp')
             }
 
             $rootScope.$apply(function(){
-              $rootScope.$broadcast('user_logged_in');
               $location.path('/');  
             });
           });
