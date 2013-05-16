@@ -23,6 +23,7 @@ angular.module('miniatureTyrionApp')
             }
 
             $rootScope.$apply(function(){
+              $rootScope.$broadcast('user_logged_in');
               $location.path('/');  
             });
           });
