@@ -1,13 +1,25 @@
 'use strict';
 
 angular.module('miniatureTyrionApp')
-  .factory('NavService', function ($rootScope) {
+  .factory('NavService', function ($rootScope, $location, localStorageService) {
     var NavService = function() {
     };
 
     NavService.prototype = {
       updateActiveNav: function(){
-        $rootScope.$broadcast('update_active_nav');
+        var userInStore = localStorageService.get('user');
+
+        if(!userInStore){
+          $location.path('/login');
+        } else {
+          this.showNav();
+          
+          if($location.path() === '/'){
+            $location.path('/home');
+          }
+          
+          $rootScope.$broadcast('update_active_nav');  
+        }
       },
       showNav: function(){
         $("#content-container").attr('class', 'span11');
