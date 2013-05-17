@@ -2,6 +2,19 @@
 <div class="content">
     <!-- content-header -->
     <div class="content-header">
+        <ul class="content-header-action pull-right">
+            <li class="divider"></li>
+            <li>
+                <a href>
+                    <div class="badge-circle color-white">
+                        <div class="grd-teal">
+                            <i class="icofont-plus-sign"></i>
+                        </div>
+                    </div>
+                    <div class="action-text color-teal"> Add Campaign</div>
+                </a>
+            </li>
+        </ul>
         <h2><i class="icofont-star"></i> Campaigns</h2>
     </div><!-- /content-header -->
     
@@ -10,8 +23,77 @@
         <!-- icons -->
         <div class="row-fluid">
             <div class="span12">
-                <p>This is the campaigns view.</p>
-            </div><!--/span-->
-        </div><!--/icons-->
-    </div><!--/content-body -->
-</div><!-- /content -->
+
+                <!-- campaign-new -->
+                <div id="campaign-new" class="row-fluid">
+                    <div class="span12">
+                        <div class="box corner-all">
+                            
+                            <div class="box-header grd-white color-silver-dark corner-top">
+                                <span>Add New Campaign</span>
+                            </div>
+                            
+                            <div class="box-body" style="display: block;">
+                                <form class="form-horizontal" ng-submit="addItem()">
+                                    <div class="control-group">
+                                        <label class="control-label" for="inputName">Title</label>
+                                        <div class="controls">
+                                            <input type="text" id="inputName" class="grd-white" ng-model="item.title">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="inputTin">Amount Needed</label>
+                                        <div class="controls">
+                                            <input type="text" id="inputTin" class="grd-white" ng-model="item.amount">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="inputDescription">Description</label>
+                                        <div class="controls">
+                                            <input type="text" id="inputDescription" class="grd-white" ng-model="item.description">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn" ng-click="clearItem()">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- campaign-list -->
+                <!-- <div id="campaign-list">
+                    <ul>
+                        <li ng-repeat="campaign in campaigns">{{campaign.name}}: {{campaign.description}}</li>
+                    </ul>
+                </div> -->
+
+                <!-- test start -->
+                <!--datatables-->
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="box corner-all">
+                            <div class="box-header grd-white corner-top">
+                                <span>Campaign List</span>
+                            </div>
+                            <div class="box-body">
+                                <ul>
+                                    <li ng-repeat="item in myItems">
+                                      {{item.title}}
+                                    </li>
+                                </ul>
+                                <!-- <table id="datatables" class="table table-bordered table-striped responsive" ng-show="page.show_list_table">
+                                </table> -->
+                            </div><!-- /box-body -->
+                        </div><!-- /box -->
+                    </div><!-- /span -->
+                </div><!--/datatables-->
+                <!-- test end -->
+
+            </div>
+        </div>
+    </div>
+</div>
