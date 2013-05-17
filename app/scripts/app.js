@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('miniatureTyrionApp', ['ui', 'LocalStorageModule', 'firebase'])
+angular.module('miniatureTyrionApp', ['ui', 'LocalStorageModule', 'ng-firebase'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
