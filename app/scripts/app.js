@@ -27,6 +27,10 @@ angular.module('miniatureTyrionApp', ['ui', 'LocalStorageModule', 'ng-firebase']
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
+      .when('/campaigns/:campaignUrl', {
+        templateUrl: 'views/campaignDetail.html',
+        controller: 'CampaignDetailCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
