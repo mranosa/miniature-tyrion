@@ -10,7 +10,11 @@
         <!-- icons -->
         <div class="row-fluid">
             <div class="span12">
-                <p>This is the donations view.</p>
+                <ul>
+                    <li ng-repeat="item in items">
+                      {{item.amount}} for <a href="#/campaigns/{{item.url}}">{{item.title}}</a> - {{item.status}}
+                    </li>
+                </ul>
             </div><!--/span-->
         </div><!--/icons-->
     </div><!--/content-body -->
