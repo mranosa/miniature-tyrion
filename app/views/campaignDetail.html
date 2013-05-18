@@ -2,7 +2,39 @@
 <div class="content">
     <!-- content-header -->
     <div class="content-header">
-        <h2><i class="icofont-star"></i> Home</h2>
+        <ul class="content-header-action pull-right">
+            <li>
+                <a href="#">
+                    <div class="badge-circle color-white">
+                        <div class="grd-green">
+                            <i class="icofont-flag"></i>
+                        </div>
+                    </div>
+                    <div class="action-text color-green">{{item.visitCount}} <span class="helper-font-small color-silver-dark">Visits</span></div>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="#">
+                    <div class="badge-circle color-white">
+                        <div class="grd-teal">
+                            <i class="icofont-user-md"></i>
+                        </div>
+                    </div>
+                    <div class="action-text color-teal">{{item.userCount}} <span class="helper-font-small color-silver-dark">Users Donated</span></div>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="#">
+                    <div class="badge-circle color-white">
+                        <div class="grd-orange">$</div>
+                    </div>
+                    <div class="action-text color-orange">{{item.currAmount}} <span class="helper-font-small color-silver-dark">Donations</span></div>
+                </a>
+            </li>
+        </ul>
+        <h2><i class="icofont-star"></i> {{item.title}}</h2>
     </div><!-- /content-header -->
     
     <!-- content-body -->
@@ -10,7 +42,9 @@
         <!-- icons -->
         <div class="row-fluid">
             <div class="span12">
-                <p>This is the campaignDetail view. - {{campaignUrl}}</p>
+            	<h1>Amount needed : {{item.amount}}</h1>
+                <p>{{item.description}}</p>
+                <p>Posted by : {{item.userDisplayName}}</p>
             </div><!--/span-->
         </div><!--/icons-->
     </div><!--/content-body -->

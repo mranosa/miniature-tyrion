@@ -28,7 +28,9 @@ angular.module('miniatureTyrionApp')
 				currAmount : 0,
 				owner : loggedInUser,
 				userDisplayName : userDisplayName,
-				url : itemUrl
+				url : itemUrl,
+                visitCount : 0,
+                userCount : 0
 			};
 
 		$scope.items.$add(newItem, itemUrl);
