@@ -30,6 +30,7 @@ angular.module('miniatureTyrionApp')
 	    		sponsorName : userDisplayName,
 	    		url : campaignUrl,
 	    		title : item.title,
+	    		received : false,
 	    		status : 'Pending'
 	    	});
 
@@ -39,6 +40,7 @@ angular.module('miniatureTyrionApp')
 	    		transactionId : $scope.donation.transactionId,
 	    		url : campaignUrl,
 	    		title : item.title,
+	    		received : false,
 	    		status : 'Sent'
 	    	});
 

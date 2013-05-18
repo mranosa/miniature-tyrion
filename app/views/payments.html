@@ -11,7 +11,7 @@
         <div class="row-fluid">
             <ul>
                 <li ng-repeat="item in items">
-                  <a href="#/campaigns/{{item.url}}">{{item.title}}</a> : {{item.amount}} from {{item.sponsorName}} - {{item.status}}
+                  <a href="#/campaigns/{{item.url}}">{{item.title}}</a> : {{item.amount}} from {{item.sponsorName}} - {{item.status}} <button ng-hide="item.received" type="button" class="btn" ng-click="accept(item)">Accept</button>
                 </li>
             </ul>
         </div><!--/icons-->
