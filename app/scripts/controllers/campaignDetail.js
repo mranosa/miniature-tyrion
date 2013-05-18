@@ -42,7 +42,7 @@ angular.module('miniatureTyrionApp')
 	    		title : item.title,
 	    		received : false,
 	    		status : 'Sent'
-	    	});
+	    	}, $scope.donation.transactionId);
 
 			$scope.clearItem();
 	    };
