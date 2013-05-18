@@ -13,7 +13,7 @@
                 <h1>Campaigns from everyone!</h1>
                 <ul>
                     <li ng-repeat="item in items">
-                      {{item.title}} - {{item.userDisplayName}} [{{item.url}}]
+                      {{item.title}} - {{item.userDisplayName}} ---><a href="#/campaigns/{{item.url}}">{{item.url}}</a>
                     </li>
                 </ul>
             </div><!--/span-->
