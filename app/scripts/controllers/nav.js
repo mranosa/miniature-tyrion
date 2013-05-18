@@ -30,7 +30,7 @@ angular.module('miniatureTyrionApp')
 	    var navs = _.map($scope.navs, 
 	      function(nav){ 
 	        nav.navCls = '';
-	        if($location.path() !== '/' && nav.url.indexOf($location.path()) === 1) {
+	        if($location.path() !== '/' && nav.url.indexOf($location.path().split("/")[1]) > -1) {
 	          nav.navCls = 'active';
 	        }
 
