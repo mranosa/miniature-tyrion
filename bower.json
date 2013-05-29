@@ -8,7 +8,13 @@
     "angular-resource": "~1.0.5",
     "angular-cookies": "~1.0.5",
     "angular-sanitize": "~1.0.5",
-    "angular-local-storage": "latest"
+    "angular-local-storage": "latest",
+    "angular-ui": "~0.4.0",
+    "angular-underscore": "latest",
+    "underscore": "~1.4.4",
+    "angular-firebase": "~0.0.2",
+    "jquery": "~2.0.1",
+    "jquery-ui": "~1.10.3"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.5",
